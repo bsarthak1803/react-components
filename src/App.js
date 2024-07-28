@@ -8,10 +8,10 @@ import ImageGallery from "./Components/ImageGallery/ImageGallery";
 const App = () => {
   return (
     <>
-      <DragDrop />
+      {/* <DragDrop />
       <InfiniteScroll />
       <Checkboxes />
-      <SearchAutoComplete />
+      <SearchAutoComplete /> */}
       <ImageGallery />
     </>
   );

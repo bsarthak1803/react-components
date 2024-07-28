@@ -18,7 +18,6 @@ const ImageGallery = () => {
         const response = await fetch("https://dummyjson.com/products");
         const data = await response.json();
         const products = data.products;
-        console.log(products);
         setIsLoading(false);
         setProductList(products);
       } catch (err) {

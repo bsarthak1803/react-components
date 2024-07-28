@@ -39,7 +39,7 @@ const Checkboxes = () => {
   const [allChecked, setAllChecked] = useState(false);
   const uniqueId = useId();
 
-  const onChangeHandler = (_, id) => {
+  const onChangeHandler = (e, id) => {
     let obj = selectionObj;
     if (obj[id] === undefined) obj[id] = true;
     else obj[id] = !obj[id];

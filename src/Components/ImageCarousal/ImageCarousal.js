@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import styles from "./ImageCarousal.module.css";
 
 const ImageCarousal = ({ images, title, index }) => {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [currentImgIndex, setCurrentImgIndex] = useState(0); //by default display the first image
 
   const onClickHandler = (e, type) => {
+    //handler to increment/decrement carousal
     switch (type) {
       case "prev":
         setCurrentImgIndex((prev) => {
@@ -24,14 +25,12 @@ const ImageCarousal = ({ images, title, index }) => {
         break;
     }
   };
-
-  console.log("currentImgIndex", currentImgIndex);
   return (
     <>
       <img
         src={images[currentImgIndex]}
         alt={title}
-        loading={index > 2 && "lazy"}
+        loading={index > 2 ? "lazy" : null}
         height={400}
         width={400}
       ></img>
