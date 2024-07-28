@@ -1,0 +1,28 @@
+.prevBtn {
+    all: unset;
+    /*unsets button default css properties */
+    display: inline-block;
+    position: absolute;
+    border: solid black;
+    border-width: 3px 0px 0px 3px;
+    transform: rotate(-45deg);
+    height: 4px;
+    width: 4px;
+    left: 1rem;
+    top: 50%;
+    padding: 1rem;
+}
+
+.nextBtn {
+    all: unset;
+    display: inline-block;
+    position: absolute;
+    border: solid black;
+    border-width: 3px 3px 0px 0px;
+    transform: rotate(45deg);
+    height: 4px;
+    width: 4px;
+    right: 1rem;
+    top: 50%;
+    padding: 1rem;
+}

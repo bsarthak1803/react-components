@@ -83,13 +83,15 @@ const Checkboxes = () => {
   return (
     <>
       {renderCheckboxes()}
-      <input
-        type="checkbox"
-        id="check-all"
-        value="check all"
-        onChange={onChangeAllHandler}
-      ></input>
-      <label htmlFor="check-all">Check All</label>
+      <li key={`${uniqueId} + check-all`}>
+        <input
+          type="checkbox"
+          id="check-all"
+          value="check all"
+          onChange={onChangeAllHandler}
+        ></input>
+        <label htmlFor="check-all">Check All</label>
+      </li>
     </>
   );
 };
