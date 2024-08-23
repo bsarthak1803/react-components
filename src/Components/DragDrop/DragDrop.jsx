@@ -32,9 +32,6 @@ const DragDrop = () => {
   const uniqueID = useId();
 
   const onDragStartHandler = (e, issueType, id) => {
-    console.log(e);
-    // console.log("issueType", issueType);
-    // console.log("id", id);
     e.dataTransfer.setData("issueType", issueType);
     e.dataTransfer.setData("issueID", id);
   };

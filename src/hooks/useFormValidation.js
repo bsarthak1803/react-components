@@ -5,7 +5,7 @@ const useFormValidation = (initialState) => {
   const [values, setValues] = useState(initialState);
 
   const onChangeHandler = (e) => {
-    const { name, value } = e.target; //e.target is an object
+    const { name, value } = e.target;
     setValues((prevValues) => {
       return { ...prevValues, [name]: value };
     });

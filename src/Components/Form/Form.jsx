@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import InputField from "../InputField/InputField";
 import { formFields } from "../../utils/constants";
 import styles from "./Form.module.css";

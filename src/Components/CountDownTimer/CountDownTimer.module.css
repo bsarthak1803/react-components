@@ -1,0 +1,47 @@
+.mainContainer {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 2rem;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.inputBox input {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.displayTimer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.buttonContainer button {
+    all: unset;
+    border: 1px solid gray;
+    height: 20px;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-weight: 400;
+}
+
+.buttonContainer button:hover {
+    cursor: pointer;
+    background: darkgray;
+    color: white;
+}
+
+.displayTimer {
+    border: 1px solid darkgray;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}

@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./SearchAutoComplete.module.css";
 
 const SearchAutoComplete = () => {
   const [products, setProducts] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
-  //   const [userInput, setUserInput] = useState("");
+  let inputRef = useRef(null);
 
-  const onChangeHandler = (e) => {
-    const input = e.target.value;
-    // setUserInput(input);
-    if (!input) setSuggestions([]);
+  const onChangeHandler = () => {
+    const input = inputRef.current.value;
+    if (!input) setSuggestions(products);
     else {
       let productList = products;
       let suggestionList = productList.filter((product) =>
@@ -20,18 +19,21 @@ const SearchAutoComplete = () => {
   };
 
   useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
     const getProducts = async () => {
       try {
         const response = await fetch("https://dummyjson.com/products");
         const data = await response.json();
         const products = data.products;
         setProducts(products);
+        setSuggestions(products);
       } catch (err) {
         console.log(err);
       }
     };
     getProducts();
   }, []);
+
   return (
     <main className={styles.main}>
       <section className={styles.inputBox}>
@@ -42,15 +44,18 @@ const SearchAutoComplete = () => {
           name="search box"
           placeholder="Search Products"
           onChange={onChangeHandler}
+          ref={inputRef}
         ></input>
       </section>
       <section className={styles.suggestionList}>
         <ul>
-          {suggestions.length > 0
-            ? suggestions.map((suggestion) => {
-                return <li key={suggestion.id}>{suggestion.title}</li>;
-              })
-            : null}
+          {suggestions.length > 0 ? (
+            suggestions.map(({ id, title }) => {
+              return <li key={id}>{title}</li>;
+            })
+          ) : (
+            <h4>No Suggestions!!</h4>
+          )}
         </ul>
       </section>
     </main>

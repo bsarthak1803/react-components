@@ -55,7 +55,7 @@ const InfiniteScroll = () => {
         {products.map(({ id, title }) => {
           return <li key={id}>{title}</li>;
         })}
-        {hasMore && <div ref={lastProductRef}>Load More Items....!!</div>}
+        {hasMore && <div ref={lastProductRef}>Loading Items....!!</div>}
       </ul>
     </main>
   );
