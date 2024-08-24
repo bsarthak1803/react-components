@@ -5,7 +5,8 @@
 // import SearchAutoComplete from "./Components/SearchAutoComplete/SearchAutoComplete";
 // import ImageGallery from "./Components/ImageGallery/ImageGallery";
 // import Form from "./Components/Form/Form.jsx";
-import CountDownTimer from "./Components/CountDownTimer/CountDownTimer.jsx";
+// import CountDownTimer from "./Components/CountDownTimer/CountDownTimer.jsx";
+import ShoppingList from "./Components/ShoppingList/ShoppingList";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       {/* <SearchAutoComplete /> */}
       {/* <ImageGallery /> */}
       {/* <Form /> */}
-      <CountDownTimer/>
+      {/* <CountDownTimer/> */}
+      <ShoppingList />
     </>
   );
 };
