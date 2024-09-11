@@ -1,0 +1,40 @@
+.mainContainer {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.stepperContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.btns button {
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    color: rgb(10, 116, 116);
+    font-size: 1rem;
+}
+
+.btns button:hover {
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.btns button:disabled {
+    background-color: grey;
+}

@@ -1,0 +1,19 @@
+.stepperCircleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.stepperCircle {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer
+}
+
+.stepperCircle h2 {
+    margin-top: 10px;
+}
